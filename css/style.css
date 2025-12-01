@@ -527,7 +527,7 @@ body { scrollbar-width: none; }
     }
 
     .navbar a {
-        /* Espaçamento entre os links, permite que fiquem lado a lado se couber */
+        /* Espaçamento entre os links */
         margin: 5px 8px;
         font-size: 0.9em;
         /* Ajuste fino para o botão CTA */
@@ -555,6 +555,9 @@ body { scrollbar-width: none; }
     .cta-button-hero {
         padding: 12px 25px;
         font-size: 1em;
+        width: 100%; /* Botão full width no mobile fica mais clicável */
+        max-width: 300px; /* Mas com um limite para não ficar gigante em tablets */
+        box-sizing: border-box;
     }
 
     /* Ajuste da logo hero em telas menores */
@@ -607,18 +610,21 @@ body { scrollbar-width: none; }
         /* Ocupa quase metade da largura para caberem 2 por linha */
         flex-basis: 47%; 
         padding: 12px;
-        /* Garante que o padding não estoure o 47% */
+        /* Garante que o padding não estoure o tamanho */
         box-sizing: border-box; 
     }
     
     .variation-img {
         max-height: 110px; 
         width: auto;
+        max-width: 100%;
     }
 
     /* --- CTA FORM (FALE CONOSCO) --- */
     .cta-form {
         flex-direction: column;
+        width: 100%;
+        align-items: center;
     }
 
     .cta-form input, .cta-button-submit {
@@ -641,6 +647,10 @@ body { scrollbar-width: none; }
         margin-right: auto; /* Centraliza o card */
     }
     
+    .card-content {
+        padding: 0 10px;
+    }
+    
     .color-element { 
         flex-direction: row; 
         flex-wrap: wrap; 
@@ -658,6 +668,25 @@ body { scrollbar-width: none; }
 
     /* --- FOOTER --- */
     .footer {
-        padding: 15px 20px;
+        padding: 30px 20px;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    /* Ajuste específico para o formulário de captura do rodapé */
+    #form-newsletter {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    
+    #form-newsletter input {
+        width: 100% !important; /* Força a largura total */
+        box-sizing: border-box;
+    }
+    
+    #form-newsletter button {
+        width: 100%;
     }
 }
