@@ -506,187 +506,143 @@ body { scrollbar-width: none; }
 /* Responsividade (Para telas menores) */
 @media (max-width: 768px) {
 
-    /* --- GERAL: CABEÇALHO (NAVBAR) --- */
+    /* --- NAVBAR (Menu) --- */
     .navbar {
-        /* Muda de linha para coluna */
         flex-direction: column;
-        /* Padding ajustado para telas menores */
         padding: 15px 20px;
-        /* Garante que ocupe a largura total */
-        width: 100%;
-        box-sizing: border-box; 
+        height: auto;
+    }
+
+    .nav-logo-img {
+        height: 40px; /* Logo um pouco menor no celular */
+        margin-bottom: 15px;
     }
 
     .navbar nav {
-        /* Margem para separar o menu do logo/título */
-        margin-top: 15px;
-        /* Permite que os links quebrem de linha se necessário */
-        flex-wrap: wrap; 
-        justify-content: center;
+        display: flex;
+        flex-direction: column; /* Empilha os links um embaixo do outro */
+        align-items: center;
         width: 100%;
+        gap: 15px; /* Espaço entre os links */
+        margin-top: 5px;
     }
 
     .navbar a {
-        /* Espaçamento entre os links */
-        margin: 5px 8px;
-        font-size: 0.9em;
-        /* Ajuste fino para o botão CTA */
-        padding: 8px 15px; 
+        margin: 0; /* Remove margem lateral */
+        font-size: 1.1em; /* Aumenta a fonte para facilitar o toque */
+        padding: 5px 0;
+        display: block;
+    }
+
+    /* Ajuste específico para o botão no menu mobile */
+    .navbar .cta-button {
+        width: 100%;
+        max-width: 200px; /* Limita a largura para não ficar gigante */
+        text-align: center;
+        margin-top: 10px;
     }
 
     /* --- HERO SECTION --- */
     .hero-section {
-        /* Reduz o padding vertical */
-        padding: 80px 10px 50px;
-        /* Permite que o conteúdo defina a altura mínima */
+        padding: 60px 20px 40px;
         min-height: unset; 
     }
     
     .hero-title {
-        /* Redução da fonte para mobile (2em) */
-        font-size: 2em; 
+        font-size: 1.8em; 
         line-height: 1.2;
     }
     
     .hero-subtitle {
         font-size: 1em;
+        margin-bottom: 30px;
     }
 
     .cta-button-hero {
-        padding: 12px 25px;
-        font-size: 1em;
-        width: 100%; /* Botão full width no mobile fica mais clicável */
-        max-width: 300px; /* Mas com um limite para não ficar gigante em tablets */
+        width: 100%; 
         box-sizing: border-box;
+        padding: 15px;
     }
 
-    /* Ajuste da logo hero em telas menores */
     .main-hero-logo-img {
-        max-width: 200px;
+        max-width: 180px;
         margin-top: 30px;
-        height: auto;
     }
 
     /* --- SERVICES SECTION --- */
     .services-grid {
-        /* Empilha os cards */
         flex-direction: column;
-    }
-
-    .services-section {
-        padding: 60px 10px; 
+        padding: 0 10px;
     }
 
     .services-title {
-        font-size: 2em; 
-        margin-bottom: 40px;
+        font-size: 1.8em; 
+        margin-bottom: 30px;
     }
     
     .service-card {
         min-height: unset; 
-        padding: 35px; 
-        margin-bottom: 20px; /* Adicionado para separar os cards empilhados */
-    }
-    
-    .service-name {
-        font-size: 1.4em; 
-        margin-bottom: 15px;
-    }
-    
-    .service-card p {
-        font-size: 1em; 
+        padding: 30px; 
+        margin-bottom: 20px; 
     }
 
-    /* --- LOGO VARIATIONS SECTION (IDENTIDADE) --- */
+    /* --- IDENTIDADE --- */
     .logo-variations-section {
-        /* Permite que os cards quebrem de linha */
         flex-wrap: wrap; 
-        gap: 10px;
         justify-content: center;
+        gap: 15px;
     }
     
     .logo-card {
-        min-height: 140px; 
-        /* Ocupa quase metade da largura para caberem 2 por linha */
-        flex-basis: 47%; 
-        padding: 12px;
-        /* Garante que o padding não estoure o tamanho */
-        box-sizing: border-box; 
+        flex-basis: 100%; /* Um card por linha no celular (melhor visualização) */
+        min-height: auto;
+        padding: 20px;
     }
     
-    .variation-img {
-        max-height: 110px; 
-        width: auto;
-        max-width: 100%;
-    }
-
-    /* --- CTA FORM (FALE CONOSCO) --- */
-    .cta-form {
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-    }
-
-    .cta-form input, .cta-button-submit {
-        width: 100%;
-        margin-bottom: 10px;
-        box-sizing: border-box; /* Garante que o padding não estoure o 100% */
-    }
-
-    /* --- IDENTITY CARD ELEMENTS --- */
+    /* --- EXPLANATION CARDS --- */
     .explanation-card { 
         flex-direction: column; 
         text-align: center; 
+        padding: 30px 20px;
     }
     
     .card-element { 
-        width: 80%; 
-        margin-right: 0; 
-        margin-bottom: 20px; 
-        margin-left: auto; 
-        margin-right: auto; /* Centraliza o card */
-    }
-    
-    .card-content {
-        padding: 0 10px;
+        width: 100%; 
+        margin: 0 0 20px 0; 
     }
     
     .color-element { 
-        flex-direction: row; 
-        flex-wrap: wrap; 
-        gap: 10px; 
-        width: 100%; 
         justify-content: center;
     }
 
-    .color-swatch {
-        width: 70px; 
-        height: 35px;
-        font-size: 0.7em;
-        line-height: 35px; /* Centraliza texto verticalmente */
+    /* --- CTA FORM (RODAPÉ) --- */
+    .cta-form {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .cta-form input {
+        width: 100% !important;
+        margin-bottom: 10px;
+    }
+
+    .cta-button-submit {
+        width: 100%;
     }
 
     /* --- FOOTER --- */
     .footer {
         padding: 30px 20px;
+        display: flex;
         flex-direction: column;
-        gap: 20px;
-        text-align: center;
+        gap: 15px;
     }
-    
-    /* Ajuste específico para o formulário de captura do rodapé */
-    #form-newsletter {
+
+    .footer .social-links {
+        display: flex;
         flex-direction: column;
-        width: 100%;
-        align-items: center;
-    }
-    
-    #form-newsletter input {
-        width: 100% !important; /* Força a largura total */
-        box-sizing: border-box;
-    }
-    
-    #form-newsletter button {
-        width: 100%;
+        gap: 10px;
+        margin-top: 10px;
     }
 }
