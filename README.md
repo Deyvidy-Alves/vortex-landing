@@ -1,11 +1,32 @@
+# 🌪️ Vortex Technologies - Landing Page Institucional
 
-  # Modern Minimalist Landing Page
+Bem-vindo ao repositório oficial da Landing Page da **Vortex Technologies**, Empresa Júnior de Desenvolvimento de Software do IF.
 
-  This is a code bundle for Modern Minimalist Landing Page. The original project is available at https://www.figma.com/design/IPOCuTfeOeZLVD7HIbX1Yi/Modern-Minimalist-Landing-Page.
+Este projeto é a vitrine digital da nossa empresa, projetada para apresentar nossas soluções (como o **V-Clinic**) com uma estética moderna, minimalista e de alta conversão.
 
-  ## Running the code
+## 🚀 Tecnologias Utilizadas
 
-  Run `npm i` to install the dependencies.
+* **Core:** [React](https://react.dev/) + [Vite](https://vitejs.dev/) (Build super rápido)
+* **Linguagem:** TypeScript (`.tsx`)
+* **Estilização:** [Tailwind CSS v4](https://tailwindcss.com/)
+* **Ícones:** Lucide React
+* **Design:** Baseado em arquitetura moderna e responsiva (Mobile-first).
 
-  Run `npm run dev` to start the development server.
-  
+---
+
+## 🛠️ Como Rodar o Projeto
+
+Siga os passos abaixo para iniciar o ambiente de desenvolvimento:
+
+### 1. Pré-requisitos
+Certifique-se de ter o **Node.js** instalado na sua máquina.
+
+### 2. Instalação
+Clone o repositório e instale as dependências:
+
+```bash
+# Entrar na pasta do projeto
+cd vortex-site
+
+# Instalar dependências (incluindo Tailwind e ícones)
+npm install
